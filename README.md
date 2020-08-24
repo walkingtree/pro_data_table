@@ -11,10 +11,10 @@ A flutter plugin for a custom datatable.
 ### Getting Started
 
 
-<img src="https://github.com/abhilashahyd/pro_dataTable/blob/master/assets/images/2020-08-21%20(1).jpg" width="200">
-<img src="https://github.com/abhilashahyd/pro_dataTable/blob/master/assets/images/2020-08-21.jpg" width="200">
-<img src="https://github.com/abhilashahyd/pro_dataTable/blob/master/assets/images/2020-08-23%20(1).jpg" width="200">
-<img src="https://github.com/abhilashahyd/pro_dataTable/blob/master/assets/images/2020-08-23.jpg" width="200">
+<img src="https://github.com/walkingtree/pro_data_table/blob/master/images/2020-08-21%20(1).jpg" width="200">
+<img src="https://github.com/walkingtree/pro_data_table/blob/master/images/2020-08-21.jpg" width="200">
+<img src="https://github.com/walkingtree/pro_data_table/blob/master/images/2020-08-23%20(1).jpg" width="200">
+<img src="https://github.com/walkingtree/pro_data_table/blob/master/images/2020-08-23.jpg" width="200">
 
 #### Properties
 
