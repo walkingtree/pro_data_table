@@ -1,12 +1,13 @@
 # pro_data_table
 
-A flutter plugin for a custom datatable.
+A flutter plugin for a custom datatable with additional capabilities like editable cells, filterable on header, theming, etc.
 
 ## Features:
-* Delete the data rows
+* Editable cells with updates to data and Save Changes
+* Capability to add filter on header
 * Theming the grid
 * Export the data in csv file
-* Save Changes
+* Delete the data rows
 
 ### Getting Started
 
