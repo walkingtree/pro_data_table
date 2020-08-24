@@ -11,6 +11,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  csv: ^4.0.3
+  permission_handler: ^5.0.1+1
+  path_provider: ^1.6.11
+  excel: ^1.1.4
+  open_file: ^3.0.1
+  url_launcher: ^5.4.11
 
 dev_dependencies:
   flutter_test:
