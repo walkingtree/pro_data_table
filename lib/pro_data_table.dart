@@ -89,10 +89,8 @@ class _ProDataTableState extends State<ProDataTable> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      appBar: AppBar(key: ValueKey('abc'),title: Text(widget.title), actions: [
+      appBar: AppBar(title: Text(widget.title), actions: [
         IconButton(
-          key:  ValueKey('abcd'),
           icon: Icon(Icons.delete),
           onPressed: () {
             //delete operation on row data with the selected items
@@ -109,7 +107,6 @@ class _ProDataTableState extends State<ProDataTable> {
           },
         ),
         IconButton(
-          key:  ValueKey('abcde'),
           icon: Icon(Icons.share),
           onPressed: () {
             getCsv(widget.tblHdr, _rowData); // Call the `onSortColumn` callback function
