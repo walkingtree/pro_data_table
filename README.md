@@ -12,10 +12,10 @@ A flutter plugin for a custom datatable with additional capabilities like editab
 ### Getting Started
 
 
-<img src="https://github.com/walkingtree/pro_data_table/blob/master/images/2020-08-21%20(1).jpg" width="200">
-<img src="https://github.com/walkingtree/pro_data_table/blob/master/images/2020-08-21.jpg" width="200">
-<img src="https://github.com/walkingtree/pro_data_table/blob/master/images/2020-08-23%20(1).jpg" width="200">
-<img src="https://github.com/walkingtree/pro_data_table/blob/master/images/2020-08-23.jpg" width="200">
+<img src="https://raw.githubusercontent.com/walkingtree/pro_data_table/master/images/2020-08-23.jpg?token=ANEKZ6CHIWXL26R4MBAJXUS7LNUL4" width="100" height="200">
+<img src="https://raw.githubusercontent.com/walkingtree/pro_data_table/master/images/2020-08-23%20(1).jpg?token=ANEKZ6DD6I3M4LPEWK4D4KS7LNULI" width="100" height="200">
+<img src="https://raw.githubusercontent.com/walkingtree/pro_data_table/master/images/2020-08-21.jpg?token=ANEKZ6CTL4GSFFNVZLAYT327LNUKW" width="100" height="200">
+<img src="https://raw.githubusercontent.com/walkingtree/pro_data_table/master/images/2020-08-21%20(1).jpg?token=ANEKZ6FHVSTBUJJGDIYM4RK7LNUJU" width="100" height="200">
 
 #### Properties
 
