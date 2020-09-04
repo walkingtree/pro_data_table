@@ -1,0 +1,74 @@
+# pro_data_table
+
+A flutter plugin for a custom datatable with additional capabilities like editable cells, filterable on header, theming, etc.
+
+## Features:
+* Editable cells with updates to data and Save Changes
+* Capability to add filter on header
+* Theming the grid
+* Export the data in csv file
+* Delete the data rows
+
+### Getting Started
+
+
+<img src="https://raw.githubusercontent.com/walkingtree/pro_data_table/master/images/2020-08-23.jpg?token=ANEKZ6CHIWXL26R4MBAJXUS7LNUL4" width="100" height="200">
+<img src="https://raw.githubusercontent.com/walkingtree/pro_data_table/master/images/2020-08-23%20(1).jpg?token=ANEKZ6DD6I3M4LPEWK4D4KS7LNULI" width="100" height="200">
+<img src="https://raw.githubusercontent.com/walkingtree/pro_data_table/master/images/2020-08-21.jpg?token=ANEKZ6CTL4GSFFNVZLAYT327LNUKW" width="100" height="200">
+<img src="https://raw.githubusercontent.com/walkingtree/pro_data_table/master/images/2020-08-21%20(1).jpg?token=ANEKZ6FHVSTBUJJGDIYM4RK7LNUJU" width="100" height="200">
+
+#### Properties
+
+```final Key key;   //A key for the widget``` 
+
+
+```List<dynamic> tblRow;   //The Table Row data```
+
+> **Example:**  final tblRow = [   <br />
+>             {                      <br />
+>               'firstName': "HariKrishna",  <br />
+>              'lastName': "S",          <br />
+>               'id': 2001,            <br />
+>               'email': "harikrishna.s@walkingtree.com"   <br />
+>             },                       <br />
+>             ];                       <br />
+
+
+
+``` List<dynamic> tblHdr;   //The Table Header column data,The object must contain below params. ``` <br />
+ ``` name ```<br />
+``` num  ```<br />
+``` col ```<br />
+``` flag ```<br />
+``` edit ```<br />
+
+>**Example:** List<dynamic> tblHdr = [ <br />
+>             {                        <br />
+>             'name': 'First Name',  &nbsp; // column name   <br />
+>              'num': true,        &nbsp; // If the column is number column true else false  <br />
+>               'col': 'firstName',  &nbsp; // column id                                <br />
+>                "flag" : false,    &nbsp;// if the column has filter then true else false    <br />
+>                "edit" : true,    &nbsp;// if the column is editable  then true else false    <br />
+>                },                <br />                   
+>          ];                                        
+          
+          
+          
+```String title;     //The Table Title```
+
+
+
+```int selectedSort;   //Pass the default sorted column index```
+
+
+
+```bool sort;         //Default ascending sort true/false```
+
+
+##### Usage:
+
+>ProDataTable(<br />
+>     tblRow: tblRow, <br />
+>      tblHdr: tblHdr, <br />
+>      title: 'The Data Table Demo', <br />
+>    ); <br />
