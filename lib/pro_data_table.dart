@@ -19,7 +19,7 @@ class ProDataTable extends StatefulWidget {
   //The Table Row data
   List<dynamic> tblRow;
   //The Table Header column data
-  List<dynamic> tblHdr;
+  List<dynamic> tblHdr ;
   //The Table Title
   String title;
 //The default sorted column index
@@ -89,7 +89,9 @@ class _ProDataTableState extends State<ProDataTable> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title), actions: [
+      appBar: AppBar(
+      key: ValueKey('appbarkey'),
+          title: Text(widget.title), actions: [
         IconButton(
           icon: Icon(Icons.delete),
           onPressed: () {
@@ -133,6 +135,7 @@ class _ProDataTableState extends State<ProDataTable> {
   }
 
   SingleChildScrollView tableBody(BuildContext ctx) {
+
     //Filtering data based on the  selected values from dropdown
     // if selected values are empty show all the data else filtered data
     _rowDatas = _selectedValues.length > 0
@@ -143,10 +146,12 @@ class _ProDataTableState extends State<ProDataTable> {
 
     //Returns the datatable widget
     return SingleChildScrollView(
+      key: ValueKey('singlechildkey'),
       scrollDirection: Axis.vertical,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: DataTable(
+          key: ValueKey('datatablekey'),
           dataRowHeight: 50,
           dividerThickness: 5,
           sortAscending: _sort,
