@@ -19,7 +19,7 @@ class ProDataTable extends StatefulWidget {
   //The Table Row data
   List<dynamic> tblRow;
   //The Table Header column data
-  List<dynamic> tblHdr ;
+  List<dynamic> tblHdr;
   //The Table Title
   String title;
 //The default sorted column index
@@ -52,7 +52,7 @@ class _ProDataTableState extends State<ProDataTable> {
   final lastNameController = TextEditingController();
   bool _sort;
   int _selectedSort;
-  // bool flag = true;
+
 
   String dropdownValue;
 
@@ -66,23 +66,15 @@ class _ProDataTableState extends State<ProDataTable> {
     _selectedSort = widget.selectedSort;      // assigning the initial sort column index
     getFilteredCols();                 // Call the `getFilteredCols` callback function
     onSortColumn(_selectedSort, _sort);   // Call the `onSortColumn` callback function
-    // selectedData = [];
+
   }
 
 
 // adding the filterable columns to a list
   List<dynamic> getFilteredCols() {
     _filterCols = widget.tblHdr.where((i) => i['filter'] == true).toList();
-    print('_filterCols');
-    print(_filterCols);
-    // return _filterCols;
-  }
 
-  // void launchURL(String url) async {
-  //   if (await canLaunch(url)) {
-  //     await launch(url);
-  //   }
-  // }
+  }
 
 
 
@@ -200,7 +192,7 @@ class _ProDataTableState extends State<ProDataTable> {
                           else
                             _selectedValues.add(option);
                         });
-                        print(_selectedValues);
+
                       })
                       : SizedBox()
                 ],
@@ -226,7 +218,7 @@ class _ProDataTableState extends State<ProDataTable> {
                   Colors.blueAccent.withOpacity(0.08))
                   : MaterialStateProperty.all<Color>(Colors.white),
               onSelectChanged: (b) {
-                print("Onselect");
+
                 onSelectedRow(b, _row);
               },
               cells: widget.tblHdr
@@ -242,8 +234,7 @@ class _ProDataTableState extends State<ProDataTable> {
                     setState(() {
                       selectedName = _row[element['columnName']];
                     });
-                    print(
-                        'Toggle ${_row[element['columnName']]}');
+
                   },
                 )
                     : DataCell(
@@ -267,16 +258,12 @@ class _ProDataTableState extends State<ProDataTable> {
   //sort operation on columns for ascending and descending
 
   onSortColumn(int columnIndex, bool ascending) {
-    print('on sort column');
-    print(widget.tblHdr[columnIndex]);
+
     String columnName = widget.tblHdr[columnIndex]['columnName'];
     bool numeric = widget.tblHdr[columnIndex]['numeric'];
-    // final sort_rowData = _rowData as Map<String, dynamic>;
 
-    print(columnName);
-    print(columnIndex);
     if (numeric != true) {
-      print(columnName);
+
       if (ascending) {
         _rowDatas.sort((a, b) => a[columnName].compareTo(b[columnName]));
       } else {
@@ -304,13 +291,12 @@ class _ProDataTableState extends State<ProDataTable> {
         _selectedData.remove(data);
       }
     });
-    print(_selectedData);
+
   }
 
 //Updates the edited cell with latest value
   updateName(index, colName) {
-    print('In');
-    print(editNameController.text);
+
     if (editNameController.text != '') {
       setState(() {
         _rowDatas[index][colName] = editNameController.text;
@@ -392,7 +378,6 @@ class _ProDataTableState extends State<ProDataTable> {
         row.add(tblRow[i][associateList[j]['columnName']]);
       }
 
-      print(row.toString());
       rows.add(row);
     }
 
@@ -400,9 +385,9 @@ class _ProDataTableState extends State<ProDataTable> {
     for (int i = 0; i < associateList.length; i++) {
       row.add(associateList[i]['name']);
     }
-    print(rows.toString());
+
     rows.insert(0, row);
-    print(rows.toString());
+
     await Permission.storage.request(); //asking for storage permission 
 
     bool checkPermission = await Permission.storage.isGranted;
@@ -412,16 +397,15 @@ class _ProDataTableState extends State<ProDataTable> {
 
       String dir = (await getExternalStorageDirectory()).absolute.path + "/doc";
       var file = "$dir";
-      print(file);
+
       var myFile = File(file + ".csv");
 
 // convert rows to String and write as csv file
 
       String csv = const ListToCsvConverter().convert(rows);
-      print(csv);
-      print(file);
+
       await myFile.writeAsString(csv);
-      // launchURL(file + ".csv");
+
     }
   }
 }

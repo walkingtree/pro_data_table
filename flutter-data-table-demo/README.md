@@ -42,7 +42,8 @@ A flutter plugin for a custom datatable with additional capabilities like editab
 ``` flag ```<br />
 ``` edit ```<br />
 
->**Example:** List<dynamic> tblHdr = [ <br />
+**Example:** 
+>List<dynamic> tblHdr = [ <br />
 >             {                        <br />
 >             'name': 'First Name',  &nbsp; // column name   <br />
 >              'num': true,        &nbsp; // If the column is number column true else false  <br />

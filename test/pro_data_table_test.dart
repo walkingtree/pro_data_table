@@ -23,25 +23,7 @@ void main() {
         'filter': false,
         'edit': true
       },
-      // {
-      //   'name': 'Last Name',
-      //   'numeric': false,
-      //   'columnName': 'lastName',
-      //   'filter': true,
-      // },
-      // {
-      //   'name': 'Id',
-      //   'numeric': true,
-      //   'columnName': 'id',
-      //   'filter': false,
-      // },
-      // {
-      //   'name': 'Email Id',
-      //   'numeric': false,
-      //   'columnName': 'email',
-      //   'filter': true,
-      //   'edit': true
-      // },
+
     ];
     await tester.pumpWidget(MaterialApp(
       home: ProDataTable(
